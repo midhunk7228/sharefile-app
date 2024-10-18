@@ -1,0 +1,31 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local File Share</title>
+    <style>
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .users-list { margin: 20px 0; }
+        .user-item { padding: 10px; border: 1px solid #ddd; margin: 5px 0; }
+        .transfer-status { margin-top: 10px; }
+        #fileInput { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Local Network File Share</h1>
+        <input type="file" id="fileInput">
+        <div class="users-list">
+            <h3>Connected Users:</h3>
+            <div id="usersList"></div>
+        </div>
+        <div class="transfer-status" id="transferStatus"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.11.1/simplepeer.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
