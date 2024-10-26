@@ -9,7 +9,7 @@ function Dashboard() {
             return res.json()
         }})
   return (
-    <div>dashboard: {data?.message}</div>
+    <div>dashboard test: {data?.message}</div>
   )
 }
 
